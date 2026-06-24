@@ -1,40 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Home</title>
-    <meta name="description" content="Home page" />
+    <title>Chase Struse | Full Stack Developer</title>
+    <meta name="description" content="Portfolio website showcasing backend projects, tech stack, and more" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/index.css" />
     <script src="https://kit.fontawesome.com/f28bdc6aab.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="intro">
-      <h1>Chase Struse</h1>
-      <h2>Full Stack Developer | Manga Lover | Corgi Enthusiast</h2>
-      <a href="https://github.com/chasestruse"><i class="fa-brands fa-square-github fa-2xl" style="color: white;"></i></a>
-      <a href="https://www.linkedin.com/in/chasestruse"><i class="fa-brands fa-linkedin fa-2xl" style="color: white; padding-left: 15px;"></i></a>
-    </div>
+    <!-- Animated Background Grid -->
+    <div class="bg-grid"></div>
 
-    <div class="container">
-        <div class="card">
-          <h3 class="title">Weather Bot</h3>
-          <h4 class="subtitle">Python Discord Bot</h4>
-          <h5 class="card-body"> 
-            Created utilizing open meteos weather api. List of commands located in README found at link below.
-          </h5>
-          <a href="https://github.com/chasestruse/weather-bot" class="card-icon"><i class="fa-brands fa-square-github fa-2xl" style="color: white; bottom: 0px;"></i></a>
-        </div>
-        <div class="card">
-          <h3 class="title">Basketball Bot</h3>
-          <h4 class="subtitle">Python Discord Bot</h4>
-          <h5 class="card-body">
-            Created utilizing api sports basketball api. List of commands located in README found at link below.
-          </h5>
-          <a href="https://github.com/chasestruse/basketball-bot" class="card-icon"><i class="fa-brands fa-square-github fa-2xl" style="color: white; bottom: 0px;"></i></a>
-        </div>
+    <!-- Hero Section -->
+    <section id="hero">
+      <h1 class="glitch-text" data-text="Chase Struse">Chase Struse</h1>
+      <p class="typewriter">Full Stack Developer | Backend Engineer | Tech Enthusiast</p>
+      <div class="social-links">
+        <a href="https://github.com/chasestruse" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/chasestruse" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       </div>
-    <script src="" async defer></script>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <p class="about-text">
+        I'm a passionate developer with expertise in building robust backend systems and full-stack applications. 
+        My journey includes creating Discord bots, automation scripts, web applications, and custom frameworks.
+        When not coding, you can find me immersed in manga or spending time with my corgis!
+      </p>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech-stack">
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="stack-grid">
+        <div class="stack-card"><i class="fa-solid fa-code"></i><span>Python</span></div>
+        <div class="stack-card"><i class="fa-brands fa-discord"></i><span>Discord.py</span></div>
+        <div class="stack-card"><i class="fa-solid fa-server"></i><span>REST APIs</span></div>
+        <div class="stack-card"><i class="fa-solid fa-terminal"></i><span>CLI Tools</span></div>
+        <div class="stack-card"><i class="fa-brands fa-html5"></i><span>HTML/CSS</span></div>
+        <div class="stack-card"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+        <div class="stack-card"><i class="fa-brands fa-nextjs"></i><span>Next.js</span></div>
+        <div class="stack-card"><i class="fa-solid fa-ethereum"></i><span>Ethereum</span></div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2 class="section-title">Featured Projects</h2>
+      
+      <!-- Snoodle Test Framework -->
+      <div class="project-card">
+        <div class="project-content">
+          <h3>Snoodle Test Framework</h3>
+          <p class="tech-stack"><i class="fa-solid fa-layer-group"></i> Python, Testing Framework</p>
+          <p>A custom test framework built in Python to streamline and automate testing workflows.</p>
+        </div>
+        <a href="https://github.com/chasestruse/snoodle-test-framework" class="project-link" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+
+      <!-- National Parks CLI App -->
+      <div class="project-card">
+        <div class="project-content">
+          <h3>National Parks CLI App</h3>
+          <p class="tech-stack"><i class="fa-solid fa-layer-group"></i> Python, API Integration</p>
+          <p>Command-line application to explore and gather data about U.S. National Parks using official APIs.</p>
+        </div>
+        <a href="https://github.com/chasestruse/national-parks-cli" class="project-link" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+
+      <!-- Ether Marketplace -->
+      <div class="project-card">
+        <div class="project-content">
+          <h3>Ether Marketplace</h3>
+          <p class="tech-stack"><i class="fa-solid fa-layer-group"></i> Next.js, Python, Ethereum</p>
+          <p>A web application enabling Ethereum transactions with a full frontend built in Next.js and Python backend.</p>
+        </div>
+        <a href="https://github.com/chasestruse/ether-marketplace" class="project-link" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+
+      <!-- GitHub Project Automation -->
+      <div class="project-card">
+        <div class="project-content">
+          <h3>GitHubProjectAutomation</h3>
+          <p class="tech-stack"><i class="fa-solid fa-layer-group"></i> Python, CLI, GitHub API</p>
+          <p>Script that automatically creates and configures GitHub projects via command-line interface.</p>
+        </div>
+        <a href="https://github.com/chasestruse/github-project-automation" class="project-link" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+
+      <!-- BDO PvP Helper -->
+      <div class="project-card">
+        <div class="project-content">
+          <h3>BDO PvP Helper</h3>
+          <p class="tech-stack"><i class="fa-solid fa-layer-group"></i> Next.js, Python, Game API</p>
+          <p>A comprehensive website for Black Desert Online players featuring PvP tools and statistics with Python backend.</p>
+        </div>
+        <a href="https://github.com/chasestruse/bdo-pvp-helper" class="project-link" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+
+      <!-- Weather Bot -->
+      <div class="project-card">
+        <div class="project-content">
+          <h3>Weather Bot</h3>
+          <p class="tech-stack"><i class="fa-solid fa-layer-group"></i> Python, Discord.py, Open Meteo API</p>
+          <p>A Discord bot providing weather information using the Open Meteos weather API. Full command list in README.</p>
+        </div>
+        <a href="https://github.com/chasestruse/weather-bot" class="project-link" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+
+      <!-- Basketball Bot -->
+      <div class="project-card">
+        <div class="project-content">
+          <h3>Basketball Bot</h3>
+          <p class="tech-stack"><i class="fa-solid fa-layer-group"></i> Python, Discord.py, API Sports API</p>
+          <p>A Discord bot delivering basketball data and statistics using the API Sports basketball API.</p>
+        </div>
+        <a href="https://github.com/chasestruse/basketball-bot" class="project-link" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 class="section-title">Get In Touch</h2>
+      <p>Always open to discussing new projects, collaborations, or just tech in general!</p>
+      <div class="social-links-large">
+        <a href="mailto:your.email@example.com" target="_blank"><i class="fa-solid fa-envelope"></i><span>Email Me</span></a>
+        <a href="https://github.com/chasestruse" target="_blank"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+        <a href="https://www.linkedin.com/in/chasestruse" target="_blank"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

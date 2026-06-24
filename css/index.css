@@ -1,92 +1,413 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
-body {
-  color: white;
-  font-family: "Oswald", "sans-serif";
-  background-color: black;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Share+Tech+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#intro {
-  position: absolute;
-  top: 37%;
-  left: 2%;
+:root {
+  --neon-cyan: #00ffff;
+  --neon-magenta: #ff00ff;
+  --neon-yellow: #ffff00;
+  --dark-bg: #0a0a12;
+  --darker-bg: #050508;
+  --panel-bg: rgba(10, 10, 18, 0.7);
 }
-#intro h1 {
+
+body {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  background-color: var(--dark-bg);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Animated Background Grid */
+.bg-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  perspective: 1000px;
+  z-index: -1;
+}
+
+.bg-grid::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+  box-shadow: 0 0 20px var(--neon-cyan);
+}
+
+/* Hero Section */
+#hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 8% 2rem;
+  overflow: hidden;
+}
+
+#hero h1.glitch-text {
+  font-size: 6em;
+  font-weight: 700;
+  color: white;
+  position: relative;
+  line-height: 1;
+  text-transform: uppercase;
+  animation: scanline 4s linear infinite;
+}
+
+@keyframes glitch-anim {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.glitch-text:hover {
+  animation: glitch-anim 0.3s infinite;
+}
+
+#hero p.typewriter {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.5em;
+  color: var(--neon-cyan);
+  margin-top: 1rem;
+  min-height: 2em;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+#hero .social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+#hero .social-links a {
+  font-size: 2em;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+#hero .social-links a:hover {
+  color: var(--neon-cyan);
+  transform: scale(1.2) rotate(10deg);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+/* Section Styles */
+section {
+  padding: 4rem 8%;
+  position: relative;
+}
+
+.section-title {
   font-size: 3em;
-  margin-bottom: 10px;
-}
-#intro h2 {
-  margin-top: 0;
-}
-
-body {
-  background-color: #100e17;
-  font-family: "Open Sans", sans-serif;
-}
-
-.container {
-  position: absolute;
-  height: 300px;
-  width: 600px;
-  top: 37%;
-  right: 5%;
-  display: flex;
-}
-
-.card {
-  display: flex;
-  height: 280px;
-  width: 200px;
-  background-color: #17141d;
-  border-radius: 10px;
-  box-shadow: -1rem 0 3rem #000;
-  /*   margin-left: -50px; */
-  transition: 0.4s ease-out;
-  position: relative;
-  left: 0px;
-}
-
-.card:not(:first-child) {
-  margin-left: -50px;
-}
-
-.card:hover {
-  transform: translateY(-20px);
-  transition: 0.4s ease-out;
-  box-shadow: 0 0 3rem white;
-}
-
-.card:hover ~ .card {
-  position: relative;
-  left: 75px;
-  transition: 0.5s ease-out;
-}
-
-.title {
+  margin-bottom: 3rem;
   color: white;
-  font-weight: 400;
+  text-transform: uppercase;
+  border-left: 6px solid var(--neon-magenta);
+  padding-left: 1.5rem;
+  display: inline-block;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
   position: absolute;
-  left: 20px;
-  top: 15px;
+  left: -20px;
+  top: 50%;
+  width: 12px;
+  height: 4px;
+  background: var(--neon-magenta);
+  box-shadow: 0 0 15px var(--neon-magenta);
 }
 
-.subtitle {
-    color: rgb(2, 141, 131);
-    font-weight: 350;
-    position: absolute;
-    left: 20px;
-    top: 45px;
+/* About Section */
+#about .about-text {
+  font-size: 1.3em;
+  max-width: 800px;
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin-top: 2rem;
 }
 
-.card-body {
-    color: white;
-    font-weight: 300;
-    position: absolute;
-    left: 20px;
-    top: 85px;
+/* Tech Stack Section */
+#tech-stack {
+  background: var(--panel-bg);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(0, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
 }
 
-.card-icon {
-    top: 225px;
-    left: 40%;
-    position: relative;
+#tech-stack .stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stack-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stack-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.stack-card:hover {
+  transform: translateY(-8px) rotateX(5deg);
+  border-color: var(--neon-cyan);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.stack-card:hover::before {
+  left: 100%;
+}
+
+.stack-card i {
+  font-size: 2.5em;
+  color: var(--neon-cyan);
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+.stack-card span {
+  font-family: "Share Tech Mono", monospace;
+  color: var(--neon-yellow);
+  font-size: 1em;
+  font-weight: 600;
+}
+
+/* Projects Section */
+#projects {
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 0, 255, 0.05) 50%, transparent 100%);
+}
+
+.project-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--panel-bg);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  border-left: 4px solid transparent;
+}
+
+.project-card:hover {
+  transform: translateX(10px) translateY(-3px);
+  border-left-color: var(--neon-magenta);
+  box-shadow: 0 10px 40px rgba(255, 0, 255, 0.15);
+}
+
+.project-card .project-content h3 {
+  font-size: 1.8em;
+  color: white;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.project-card .tech-stack {
+  font-family: "Share Tech Mono", monospace;
+  color: var(--neon-cyan);
+  font-size: 0.9em;
+  margin-bottom: 1rem;
+}
+
+.project-card .tech-stack i {
+  margin-right: 8px;
+}
+
+.project-card p {
+  color: #c0c0c0;
+  font-family: "Share Tech Mono", monospace;
+  line-height: 1.5;
+}
+
+.project-link {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 0, 255, 0.1);
+  border-radius: 8px;
+  color: var(--neon-magenta);
+  font-size: 1.8em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: rgba(255, 0, 255, 0.3);
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.4);
+}
+
+/* Contact Section */
+#contact {
+  background: linear-gradient(180deg, var(--panel-bg) 0%, transparent 100%);
+  text-align: center;
+  padding-bottom: 6rem;
+}
+
+#contact p {
+  font-size: 1.2em;
+  color: #c0c0c0;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+#contact .social-links-large {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+#contact .social-links-large a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 2.5rem;
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+#contact .social-links-large a:hover {
+  background: rgba(0, 255, 255, 0.2);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 40px rgba(0, 255, 255, 0.3);
+}
+
+#contact .social-links-large a i {
+  font-size: 1.8em;
+  color: var(--neon-cyan);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #hero h1.glitch-text {
+    font-size: 3em;
+  }
+
+  #hero p.typewriter {
+    font-size: 1.2em;
+  }
+
+  section {
+    padding: 3rem 5%;
+  }
+
+  .section-title {
+    font-size: 2em;
+  }
+
+  .project-card {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .project-link {
+    margin-top: 1.5rem;
+  }
+
+  .stack-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .stack-card {
+    padding: 1rem 0.5rem;
+  }
+
+  .stack-card i {
+    font-size: 2em;
+  }
+
+  .stack-card span {
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero h1.glitch-text {
+    font-size: 2.5em;
+  }
+
+  section {
+    padding: 2rem 3%;
+  }
+
+  .project-card .tech-stack {
+    display: none;
+  }
+
+  .stack-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .stack-card i {
+    font-size: 1.8em;
+  }
+
+  .stack-card span {
+    font-size: 0.75em;
+  }
+}
+
+/* Scanline Animation */
+@keyframes scanline {
+  0% { opacity: 1; }
+  48% { opacity: 1; }
+  49% { opacity: 0.7; }
+  50% { opacity: 1; }
+  51% { opacity: 1; }
+  52% { opacity: 0.6; }
+  53% { opacity: 1; }
+  100% { opacity: 1; }
 }
