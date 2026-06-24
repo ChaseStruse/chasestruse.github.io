@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Blog | Chase Struse | Senior Software Engineer</title>
+    <meta name="description" content="Technical blog of Chase Struse, covering backend architecture, cloud systems, databases, and modern web development." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- Additional Styles for Blog Controls -->
+    <style>
+      .blog-controls {
+        max-width: 800px;
+        margin: 2.5rem auto 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .search-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+      }
+      .search-wrapper input {
+        width: 100%;
+        background: var(--bg-panel);
+        border: 1px solid var(--border-subtle);
+        border-radius: 10px;
+        padding: 0.8rem 1rem 0.8rem 2.8rem;
+        color: var(--text-primary);
+        font-family: var(--font-sans);
+        font-size: 0.95rem;
+        transition: var(--transition-fast);
+      }
+      .search-wrapper input:focus {
+        border-color: var(--accent-primary);
+        outline: none;
+        box-shadow: 0 0 15px rgba(99, 102, 241, 0.15);
+      }
+      .search-icon-inside {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text-muted);
+        font-size: 1rem;
+      }
+      .blog-filter-tags {
+        display: flex;
+        justify-content: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+      .blog-tag-btn {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--border-subtle);
+        color: var(--text-secondary);
+        padding: 0.4rem 1rem;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-family: var(--font-sans);
+        font-weight: 500;
+        cursor: pointer;
+        transition: var(--transition-fast);
+      }
+      .blog-tag-btn:hover, .blog-tag-btn.active {
+        background: var(--accent-primary);
+        border-color: var(--accent-primary);
+        color: white;
+      }
+      .no-results {
+        text-align: center;
+        grid-column: 1 / -1;
+        padding: 4rem 2rem;
+        color: var(--text-secondary);
+      }
+      .no-results i {
+        font-size: 3rem;
+        color: var(--text-muted);
+        margin-bottom: 1.5rem;
+      }
+    </style>
+    <!-- FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/f28bdc6aab.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Ambient Background Elements -->
+    <div class="ambient-light light-1"></div>
+    <div class="ambient-light light-2"></div>
+    <div class="bg-grid"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="index.html#hero" class="nav-logo">
+          <i class="fa-solid fa-terminal"></i> CS
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="index.html#tech-stack" class="nav-link">Tech Stack</a></li>
+          <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="index.html#contact" class="nav-link nav-btn">Contact Me</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+      <div class="container">
+        <div class="section-title-wrapper" style="text-align: center; margin-bottom: 1rem;">
+          <h1 class="section-title" style="font-size: 3rem; font-weight: 800;">The Engineering Blog</h1>
+          <p class="section-subtitle" style="font-size: 1.15rem; max-width: 600px; margin: 0.5rem auto 0;">
+            Thoughts, tutorials, and deep dives on software architecture, backend systems, and cloud engineering.
+          </p>
+        </div>
+
+        <!-- Search and Tag Filtering Controls -->
+        <div class="blog-controls">
+          <div class="search-wrapper">
+            <i class="fa-solid fa-magnifying-glass search-icon-inside"></i>
+            <input type="text" id="blog-search" placeholder="Search articles by title, tags, or summary..." />
+          </div>
+          <div class="blog-filter-tags" id="blog-filter-tags">
+            <button class="blog-tag-btn active" data-tag="all">All Topics</button>
+            <!-- Other tag buttons will be dynamically generated here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Posts Listing -->
+    <section style="padding-top: 0; padding-bottom: 6rem;">
+      <div class="container">
+        <div class="blog-grid" id="blog-grid">
+          <!-- Blog cards will be dynamically rendered here by blog.js -->
+          <div style="text-align: center; grid-column: 1 / -1; padding: 4rem 2rem;">
+            <i class="fa-solid fa-spinner fa-spin" style="font-size: 2rem; color: var(--accent-primary);"></i>
+            <p style="margin-top: 1rem; color: var(--text-secondary);">Loading articles...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-content">
+        <p class="footer-copyright">
+          &copy; 2026 Chase Struse. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+  </body>
+</html>

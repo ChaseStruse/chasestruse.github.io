@@ -1,0 +1,18 @@
+[
+  {
+    "id": "hello-world",
+    "title": "Welcome to my New Portfolio and Blog",
+    "date": "June 24, 2026",
+    "summary": "An introduction to my updated portfolio website, why I decided to integrate a blog, and what you can expect to see published here in the future.",
+    "tags": ["General", "Career"],
+    "filePath": "blog/posts/hello-world.md"
+  },
+  {
+    "id": "building-with-nextjs-and-aws",
+    "title": "Building Scalable Architectures with Next.js and AWS",
+    "date": "June 22, 2026",
+    "summary": "A deep dive into combining the frontend power of Next.js with robust AWS serverless and containerized backend architectures, featuring Python, C# microservices, and SQL optimization.",
+    "tags": ["Next.js", "AWS", "Architecture"],
+    "filePath": "blog/posts/nextjs-aws.md"
+  }
+]
