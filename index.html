@@ -4,358 +4,481 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Chase Struse | Senior Software Engineer</title>
-    <meta name="description" content="Portfolio of Chase Struse, a Senior Software Engineer specializing in Python, C#, AWS, SQL, and Next.js." />
+    <meta name="description" content="Portfolio of Chase Struse, a Senior Software Engineer building Solar Forge: local-first desktop apps, developer tools, and Linux software." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090908" />
     <link rel="stylesheet" href="css/index.css" />
-    <!-- FontAwesome for Premium Icons -->
     <script src="https://kit.fontawesome.com/f28bdc6aab.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <!-- Ambient Background Elements -->
-    <div class="ambient-light light-1"></div>
-    <div class="ambient-light light-2"></div>
-    <div class="bg-grid"></div>
-
     <!-- Navigation Header -->
     <header class="navbar">
       <div class="container nav-container">
         <a href="#hero" class="nav-logo">
-          <i class="fa-solid fa-terminal"></i> CS
+          <span class="nav-logo-mark">CS</span> Chase Struse
         </a>
         <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
           <i class="fa-solid fa-bars"></i>
         </button>
         <ul class="nav-links" id="nav-links">
-          <li><a href="#hero" class="nav-link">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#tech-stack" class="nav-link">Tech Stack</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#tech-stack" class="nav-link">Stack</a></li>
           <li><a href="blog.html" class="nav-link">Blog</a></li>
-          <li><a href="#contact" class="nav-link nav-btn">Contact Me</a></li>
+          <li><a href="/diagrams/" class="nav-link"><i class="fa-solid fa-diagram-project"></i> Diagrams</a></li>
+          <li><a href="#contact" class="nav-link nav-btn">Contact</a></li>
         </ul>
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-badge">
-            <i class="fa-solid fa-briefcase"></i> Senior Software Engineer
-          </div>
-          <h1 class="hero-title">
-            Hi, I'm <span class="gradient-text">Chase Struse</span>
-          </h1>
-          <p class="hero-desc">
-            I build highly scalable backend systems, secure cloud architectures, and modern web applications. Specializing in Python, C#, AWS, SQL, and Next.js.
-          </p>
-          <div class="hero-ctas">
-            <a href="#projects" class="btn btn-primary">
-              View My Projects <i class="fa-solid fa-arrow-down"></i>
-            </a>
-            <a href="blog.html" class="btn btn-secondary">
-              Read My Blog <i class="fa-solid fa-book-open"></i>
-            </a>
-          </div>
-          <div class="hero-socials">
-            <span>CONNECT WITH ME</span>
-            <a href="https://github.com/chasestruse" target="_blank" class="social-icon" aria-label="GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/chasestruse" target="_blank" class="social-icon" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
+    <main>
+      <!-- Hero Section -->
+      <section id="hero">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="status-dot"></span> Senior Software Engineer
+            </div>
+            <h1 class="hero-title">
+              I build software that runs <span class="accent">fast, local, and reliably.</span>
+            </h1>
+            <p class="hero-desc">
+              I'm Chase Struse. By day I design backend systems and cloud infrastructure in Python, C#, AWS, and SQL. On my own time I run <strong>Solar Ram Studios</strong>, home of <strong>Solar Forge</strong>: a suite of local-first desktop apps, developer tools, and Linux software.
+            </p>
+            <div class="hero-ctas">
+              <a href="#projects" class="btn btn-primary">
+                View Projects <i class="fa-solid fa-arrow-down"></i>
+              </a>
+              <a href="/diagrams/" class="btn btn-secondary">
+                <i class="fa-solid fa-diagram-project"></i> Open Solar Forge Diagrams
+              </a>
+              <a href="blog.html" class="btn btn-secondary">
+                <i class="fa-solid fa-book-open"></i> Blog
+              </a>
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat"><strong>11</strong><span>Solar Forge projects</span></div>
+              <div class="hero-stat"><strong>Local-first</strong><span>Offline by default</span></div>
+              <div class="hero-stat"><strong>Linux</strong><span>Native on Omarchy</span></div>
+            </div>
+            <div class="hero-socials">
+              <span>CONNECT</span>
+              <a href="https://github.com/chasestruse" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/chasestruse" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- About Me Section -->
-    <section id="about">
-      <div class="container">
-        <div class="section-title-wrapper">
-          <h2 class="section-title">About Me</h2>
-          <p class="section-subtitle">Who I am and what drives my engineering approach</p>
-        </div>
-        
-        <div class="about-grid">
-          <div class="about-details">
-            <p>
-              As a Senior Software Engineer, I focus on engineering robust, highly-performant backend infrastructures and seamless full-stack user experiences. I enjoy solving complex structural challenges, design patterns, and automating workflows to increase overall delivery velocity.
-            </p>
-            <p class="about-highlight">
-              "Great software design is not just about writing clean code; it's about building scalable systems that solve real business challenges and adapt effortlessly to future needs."
-            </p>
-            <p>
-              My professional expertise spans high-concurrency architectures in Python and C#, cloud deployments on AWS, relational database design and optimization, and responsive web development using React and Next.js. I believe in continuous learning, technical mentorship, and maintaining a high quality bar.
-            </p>
+      <!-- About Section -->
+      <section id="about">
+        <div class="container">
+          <div class="section-title-wrapper">
+            <span class="eyebrow">About</span>
+            <h2 class="section-title">Backend engineer by trade, toolmaker by habit</h2>
           </div>
-          
-          <div class="about-image-wrapper">
+
+          <div class="about-grid">
+            <div class="about-details">
+              <p>
+                As a Senior Software Engineer, I focus on robust, high-performance backend infrastructure and dependable full-stack experiences. I enjoy untangling complex structural problems, applying sound design patterns, and automating workflows so teams can ship faster.
+              </p>
+              <p class="about-highlight">
+                Great software design isn't just clean code. It's building systems that solve real problems and adapt easily to what comes next.
+              </p>
+              <p>
+                Solar Forge is where I put that into practice outside of work: native apps that keep your data on your machine, tools that make AI assistance inspectable and reversible, and polished additions to the Omarchy Linux desktop.
+              </p>
+            </div>
+
             <div class="glass-panel-card">
-              <div class="corgi-info">
-                <div class="corgi-icon">
+              <ul class="fact-list">
+                <li>
+                  <i class="fa-solid fa-server"></i>
+                  <div><strong>Backend &amp; cloud</strong>APIs, data pipelines, and AWS architecture</div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-desktop"></i>
+                  <div><strong>Desktop &amp; Linux</strong>Qt, QML, and Tauri apps built for Omarchy</div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-microchip"></i>
+                  <div><strong>Practical AI</strong>Local models, auditable agents, human approval</div>
+                </li>
+                <li>
                   <i class="fa-solid fa-dog"></i>
+                  <div><strong>Off the clock</strong>Manga, new tech, and time with my Corgis</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects">
+        <div class="container">
+          <div class="section-title-wrapper">
+            <span class="eyebrow">Projects</span>
+            <h2 class="section-title">Solar Forge</h2>
+            <p class="section-subtitle">
+              A growing family of open-source apps and tools: desktop software, developer tooling, web experiences, and Omarchy customizations.
+            </p>
+          </div>
+
+          <!-- Studio note -->
+          <aside class="studio-note" aria-label="About Solar Ram Studios">
+            <svg class="studio-mark" viewBox="0 0 64 64" aria-hidden="true">
+              <defs>
+                <radialGradient id="studio-glow">
+                  <stop stop-color="#e8a845" stop-opacity=".23" />
+                  <stop offset="1" stop-color="#090908" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+              <rect width="64" height="64" rx="14" fill="#090908" />
+              <circle cx="32" cy="32" r="29" fill="url(#studio-glow)" />
+              <circle cx="32" cy="32" r="24" fill="none" stroke="#a36c2d" stroke-width="1" />
+              <g stroke="#f2bd69" stroke-linecap="round">
+                <path d="M32 11v42M11 32h42M17 17l30 30M47 17 17 47" stroke-width="1.3" />
+                <circle cx="32" cy="32" r="4" fill="#e8a845" stroke="none" />
+              </g>
+            </svg>
+            <div>
+              <span class="studio-kicker">A Solar Ram Studios collection</span>
+              <p>
+                Solar Forge is built under <strong>Solar Ram Studios</strong>, my independent studio for tools across work, play, and personalization. <em>Ideas built to shine.</em>
+              </p>
+            </div>
+          </aside>
+
+          <!-- Featured: Diagrams -->
+          <article class="featured-project">
+            <div>
+              <span class="featured-label"><i class="fa-solid fa-star"></i> Featured &middot; Try it in your browser</span>
+              <h3>Solar Forge Diagrams</h3>
+              <p class="project-desc">
+                Offline architecture diagramming for Linux. Draw AWS, Kubernetes, container, and flowchart diagrams on an isometric Three.js canvas, import existing infrastructure, check which traffic can actually flow, and export images, video, or diagram source. No account, server, or internet connection required.
+              </p>
+              <ul class="project-tags">
+                <li class="project-tag">TypeScript</li>
+                <li class="project-tag">Three.js</li>
+                <li class="project-tag">Tauri</li>
+                <li class="project-tag">Rust</li>
+              </ul>
+              <div class="featured-actions">
+                <a href="/diagrams/" class="btn btn-primary">
+                  <i class="fa-solid fa-diagram-project"></i> Open Diagrams
+                </a>
+                <a href="https://github.com/ChaseStruse/solar-forge-diagrams" target="_blank" rel="noopener" class="btn btn-secondary">
+                  <i class="fa-brands fa-github"></i> Source
+                </a>
+              </div>
+            </div>
+            <ul class="feature-list">
+              <li><i class="fa-solid fa-cubes"></i><span>Official AWS and Kubernetes icon catalogs, plus flowchart shapes</span></li>
+              <li><i class="fa-solid fa-file-import"></i><span>Import Terraform, CloudFormation, and Docker Compose, parsed locally</span></li>
+              <li><i class="fa-solid fa-network-wired"></i><span>Reachability checks from security groups, NACLs, and route tables</span></li>
+              <li><i class="fa-solid fa-route"></i><span>Animated traffic journeys with saved scenarios and captions</span></li>
+              <li><i class="fa-solid fa-file-export"></i><span>Export to PNG, SVG, GIF, MP4, Mermaid, PlantUML, and draw.io</span></li>
+            </ul>
+          </article>
+
+          <div class="projects-controls">
+            <h3>More from Solar Forge</h3>
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="desktop">Desktop</button>
+              <button class="filter-btn" data-filter="ai">AI &amp; Dev Tools</button>
+              <button class="filter-btn" data-filter="web">Web</button>
+              <button class="filter-btn" data-filter="omarchy">Omarchy</button>
+            </div>
+          </div>
+
+          <div class="projects-grid" id="projects-grid">
+            <!-- Harness -->
+            <article class="project-card" data-category="ai">
+              <div class="project-card-header">
+                <div class="project-icon"><i class="fa-solid fa-robot"></i></div>
+                <div class="project-links">
+                  <a href="https://github.com/ChaseStruse/solar-forge-harness" target="_blank" rel="noopener" class="project-link-icon" aria-label="Solar Forge Harness on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
                 </div>
-                <h3 class="corgi-title">Beyond the Code</h3>
-                <p class="corgi-desc">
-                  When I am not designing APIs or optimizing database queries, you can usually find me reading manga, exploring new tech, or spending quality time with my Corgis!
-                </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+              <h3 class="project-title">Solar Forge Harness</h3>
+              <p class="project-desc">A Python CLI for request-driven coding agents. Write a request, review the plan, and approve each edit. Works with OpenAI, Claude, Ollama, or any compatible server, and leaves a full audit trail in the project.</p>
+              <ul class="project-tags">
+                <li class="project-tag">Python</li>
+                <li class="project-tag">LLM Agents</li>
+                <li class="project-tag">CLI</li>
+              </ul>
+            </article>
 
-    <!-- Tech Stack Section -->
-    <section id="tech-stack">
-      <div class="container">
-        <div class="section-title-wrapper">
-          <h2 class="section-title">Professional Tech Stack</h2>
-          <p class="section-subtitle">The core technologies I specialize in and use to build production systems</p>
-        </div>
-        
-        <div class="tech-grid">
-          <!-- Python Card -->
-          <div class="tech-card featured">
-            <i class="fa-brands fa-python"></i>
-            <h3>Python</h3>
-            <p>Django • FastAPI • Automation • Scripting</p>
-          </div>
-          
-          <!-- C# Card -->
-          <div class="tech-card featured">
-            <i class="fa-solid fa-code"></i>
-            <h3>C# & .NET</h3>
-            <p>Web APIs • Enterprise • Backend Systems</p>
-          </div>
-          
-          <!-- AWS Card -->
-          <div class="tech-card featured">
-            <i class="fa-brands fa-aws"></i>
-            <h3>AWS Cloud</h3>
-            <p>Lambda • ECS/EC2 • S3 • RDS • Serverless</p>
-          </div>
-          
-          <!-- SQL Card -->
-          <div class="tech-card featured">
-            <i class="fa-solid fa-database"></i>
-            <h3>SQL Databases</h3>
-            <p>PostgreSQL • SQL Server • Query Optimization</p>
-          </div>
-          
-          <!-- Next.js Card -->
-          <div class="tech-card featured">
-            <i class="fa-brands fa-react"></i>
-            <h3>Next.js & React</h3>
-            <p>SSR • SPA • State Management • Responsive UI</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-      <div class="container">
-        <div class="section-title-wrapper">
-          <h2 class="section-title">Featured Projects</h2>
-          <p class="section-subtitle">A collection of open-source libraries, CLI applications, and tools</p>
-        </div>
-        
-        <div class="projects-controls">
-          <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="python">Python</button>
-            <button class="filter-btn" data-filter="nextjs">Next.js</button>
-            <button class="filter-btn" data-filter="discord">Discord.py</button>
-          </div>
-        </div>
-        
-        <div class="projects-grid" id="projects-grid">
-          <!-- Snoodle Test Framework -->
-          <div class="project-card" data-category="python">
-            <div class="project-card-header">
-              <div class="project-icon"><i class="fa-solid fa-vial"></i></div>
-              <div class="project-links">
-                <a href="https://github.com/chasestruse/snoodle-test-framework" target="_blank" class="project-link-icon" aria-label="GitHub Repository">
-                  <i class="fa-brands fa-github"></i>
-                </a>
+            <!-- Game Engine -->
+            <article class="project-card" data-category="desktop ai">
+              <div class="project-card-header">
+                <div class="project-icon"><i class="fa-solid fa-gamepad"></i></div>
+                <div class="project-links">
+                  <a href="https://github.com/ChaseStruse/solar-forge-game-engine" target="_blank" rel="noopener" class="project-link-icon" aria-label="Solar Forge Game Engine on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div>
-              <h3 class="project-title">Snoodle Test Framework</h3>
-              <p class="project-desc">A custom test framework built in Python to streamline, simplify, and automate testing workflows.</p>
-            </div>
-            <ul class="project-tags">
-              <li class="project-tag">Python</li>
-              <li class="project-tag">Testing</li>
-              <li class="project-tag">Automation</li>
-            </ul>
-          </div>
+              <h3 class="project-title">Solar Forge Game Engine</h3>
+              <p class="project-desc">An LLM-first native 2D game engine for Linux. A visual scene editor, playable runtime, and scripting, with an AI assistant that proposes reviewable, undoable changes and works with local models.</p>
+              <ul class="project-tags">
+                <li class="project-tag">Python</li>
+                <li class="project-tag">PySide6</li>
+                <li class="project-tag">Ollama</li>
+              </ul>
+            </article>
 
-          <!-- National Parks CLI App -->
-          <div class="project-card" data-category="python">
-            <div class="project-card-header">
-              <div class="project-icon"><i class="fa-solid fa-tree"></i></div>
-              <div class="project-links">
-                <a href="https://github.com/chasestruse/national-parks-cli" target="_blank" class="project-link-icon" aria-label="GitHub Repository">
-                  <i class="fa-brands fa-github"></i>
-                </a>
+            <!-- Life Helper -->
+            <article class="project-card" data-category="desktop">
+              <div class="project-card-header">
+                <div class="project-icon"><i class="fa-solid fa-house-user"></i></div>
+                <div class="project-links">
+                  <a href="https://github.com/ChaseStruse/solar-forge-life-helper" target="_blank" rel="noopener" class="project-link-icon" aria-label="Solar Forge Life Helper on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div>
-              <h3 class="project-title">National Parks CLI</h3>
-              <p class="project-desc">Command-line application to explore and gather data about U.S. National Parks using official government APIs.</p>
-            </div>
-            <ul class="project-tags">
-              <li class="project-tag">Python</li>
-              <li class="project-tag">CLI</li>
-              <li class="project-tag">API Integration</li>
-            </ul>
-          </div>
+              <h3 class="project-title">Solar Forge Life Helper</h3>
+              <p class="project-desc">A private, multi-user desktop hub for everyday life: budgeting, tasks, journal, habits, fitness, meal planning, pet care, home maintenance, and a calendar, with an optional on-device assistant.</p>
+              <ul class="project-tags">
+                <li class="project-tag">Python</li>
+                <li class="project-tag">PySide6</li>
+                <li class="project-tag">SQLite</li>
+              </ul>
+            </article>
 
-          <!-- Ether Marketplace -->
-          <div class="project-card" data-category="nextjs">
-            <div class="project-card-header">
-              <div class="project-icon"><i class="fa-solid fa-shop"></i></div>
-              <div class="project-links">
-                <a href="https://github.com/chasestruse/ether-marketplace" target="_blank" class="project-link-icon" aria-label="GitHub Repository">
-                  <i class="fa-brands fa-github"></i>
-                </a>
+            <!-- Boards -->
+            <article class="project-card" data-category="web ai">
+              <div class="project-card-header">
+                <div class="project-icon"><i class="fa-solid fa-table-columns"></i></div>
+                <div class="project-links">
+                  <a href="https://github.com/ChaseStruse/solar-forge-boards" target="_blank" rel="noopener" class="project-link-icon" aria-label="Solar Forge Boards on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div>
-              <h3 class="project-title">Ether Marketplace</h3>
-              <p class="project-desc">A web application enabling Ethereum transactions with a modern Next.js frontend and Python backend.</p>
-            </div>
-            <ul class="project-tags">
-              <li class="project-tag">Next.js</li>
-              <li class="project-tag">Python</li>
-              <li class="project-tag">Web3</li>
-            </ul>
-          </div>
+              <h3 class="project-title">Solar Forge Boards</h3>
+              <p class="project-desc">A project and story board built for both people and software agents. Guarded workflow lanes, a versioned JSON API, GitHub release integration, and an immutable activity trail.</p>
+              <ul class="project-tags">
+                <li class="project-tag">Python</li>
+                <li class="project-tag">Flask</li>
+                <li class="project-tag">PostgreSQL</li>
+                <li class="project-tag">HTMX</li>
+              </ul>
+            </article>
 
-          <!-- GitHub Project Automation -->
-          <div class="project-card" data-category="python">
-            <div class="project-card-header">
-              <div class="project-icon"><i class="fa-solid fa-gears"></i></div>
-              <div class="project-links">
-                <a href="https://github.com/chasestruse/github-project-automation" target="_blank" class="project-link-icon" aria-label="GitHub Repository">
-                  <i class="fa-brands fa-github"></i>
-                </a>
+            <!-- Arcade -->
+            <article class="project-card" data-category="web">
+              <div class="project-card-header">
+                <div class="project-icon"><i class="fa-solid fa-ghost"></i></div>
+                <div class="project-links">
+                  <a href="https://github.com/ChaseStruse/solar-forge-arcade" target="_blank" rel="noopener" class="project-link-icon" aria-label="Solar Forge Arcade on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div>
-              <h3 class="project-title">GitHub Project Automation</h3>
-              <p class="project-desc">Script that automatically creates and configures GitHub projects and boards via a command-line interface.</p>
-            </div>
-            <ul class="project-tags">
-              <li class="project-tag">Python</li>
-              <li class="project-tag">CLI</li>
-              <li class="project-tag">GitHub API</li>
-            </ul>
-          </div>
+              <h3 class="project-title">Solar Forge Arcade</h3>
+              <p class="project-desc">A retro 3D arcade cabinet in the browser with eight original games, including Protect the Forge, Brick Breaker, and Solar Pool. Deployed as a static site with no dependencies.</p>
+              <ul class="project-tags">
+                <li class="project-tag">JavaScript</li>
+                <li class="project-tag">Canvas</li>
+                <li class="project-tag">Three.js</li>
+                <li class="project-tag">Bun</li>
+              </ul>
+            </article>
 
-          <!-- BDO PvP Helper -->
-          <div class="project-card" data-category="nextjs">
-            <div class="project-card-header">
-              <div class="project-icon"><i class="fa-solid fa-gamepad"></i></div>
-              <div class="project-links">
-                <a href="https://github.com/chasestruse/bdo-pvp-helper" target="_blank" class="project-link-icon" aria-label="GitHub Repository">
-                  <i class="fa-brands fa-github"></i>
-                </a>
+            <!-- Signal Lab -->
+            <article class="project-card" data-category="desktop">
+              <div class="project-card-header">
+                <div class="project-icon"><i class="fa-solid fa-wave-square"></i></div>
+                <div class="project-links">
+                  <a href="https://github.com/ChaseStruse/solar-forge-signal-lab" target="_blank" rel="noopener" class="project-link-icon" aria-label="Solar Forge Signal Lab on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div>
-              <h3 class="project-title">BDO PvP Helper</h3>
-              <p class="project-desc">A comprehensive dashboard for Black Desert Online players featuring PvP tools, damage metrics, and statistics.</p>
-            </div>
-            <ul class="project-tags">
-              <li class="project-tag">Next.js</li>
-              <li class="project-tag">Python</li>
-              <li class="project-tag">Game API</li>
-            </ul>
-          </div>
+              <h3 class="project-title">Solar Forge Signal Lab</h3>
+              <p class="project-desc">An offline spaceship soundscape studio. Mix reactor hum, cockpit rain, radio static, and space jazz over an animated starfield, with a sleep timer and a locked-down container runtime.</p>
+              <ul class="project-tags">
+                <li class="project-tag">Python</li>
+                <li class="project-tag">Qt Quick</li>
+                <li class="project-tag">NumPy</li>
+              </ul>
+            </article>
 
-          <!-- Weather Bot -->
-          <div class="project-card" data-category="discord">
-            <div class="project-card-header">
-              <div class="project-icon"><i class="fa-solid fa-cloud-sun"></i></div>
-              <div class="project-links">
-                <a href="https://github.com/chasestruse/weather-bot" target="_blank" class="project-link-icon" aria-label="GitHub Repository">
-                  <i class="fa-brands fa-github"></i>
-                </a>
+            <!-- Dashboard -->
+            <article class="project-card" data-category="omarchy">
+              <div class="project-card-header">
+                <div class="project-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                <div class="project-links">
+                  <a href="https://github.com/ChaseStruse/solar-forge-dashboard" target="_blank" rel="noopener" class="project-link-icon" aria-label="Solar Forge Dashboard on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div>
-              <h3 class="project-title">Weather Bot</h3>
-              <p class="project-desc">A Discord bot providing rich weather forecasts and climate insights using the Open Meteo weather API.</p>
-            </div>
-            <ul class="project-tags">
-              <li class="project-tag">Discord.py</li>
-              <li class="project-tag">Python</li>
-              <li class="project-tag">API</li>
-            </ul>
-          </div>
+              <h3 class="project-title">Solar Forge Dashboard</h3>
+              <p class="project-desc">A command-center dashboard for Omarchy Linux: objectives, GitHub activity, system health, a theme switcher, focus modes, and a workspace radar that maps Hyprland windows to orbiting moons.</p>
+              <ul class="project-tags">
+                <li class="project-tag">QML</li>
+                <li class="project-tag">Hyprland</li>
+                <li class="project-tag">Shell</li>
+              </ul>
+            </article>
 
-          <!-- Basketball Bot -->
-          <div class="project-card" data-category="discord">
-            <div class="project-card-header">
-              <div class="project-icon"><i class="fa-solid fa-basketball"></i></div>
-              <div class="project-links">
-                <a href="https://github.com/chasestruse/basketball-bot" target="_blank" class="project-link-icon" aria-label="GitHub Repository">
-                  <i class="fa-brands fa-github"></i>
-                </a>
+            <!-- Game Guides -->
+            <article class="project-card" data-category="web">
+              <div class="project-card-header">
+                <div class="project-icon"><i class="fa-solid fa-book"></i></div>
+                <div class="project-links">
+                  <a href="https://github.com/ChaseStruse/solar-forge-game-guides" target="_blank" rel="noopener" class="project-link-icon" aria-label="Solar Forge Game Guides on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div>
-              <h3 class="project-title">Basketball Bot</h3>
-              <p class="project-desc">A Discord bot delivering live basketball games, player stats, and league tables using the API Sports API.</p>
-            </div>
-            <ul class="project-tags">
-              <li class="project-tag">Discord.py</li>
-              <li class="project-tag">Python</li>
-              <li class="project-tag">API</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+              <h3 class="project-title">Solar Forge Game Guides</h3>
+              <p class="project-desc">A lightweight, responsive guide site for MMORPGs. The Aion 2 section has live event timers, class breakdowns, and a progress checklist. No build step required.</p>
+              <ul class="project-tags">
+                <li class="project-tag">HTML</li>
+                <li class="project-tag">HTMX</li>
+                <li class="project-tag">Cloudflare Pages</li>
+              </ul>
+            </article>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <div class="contact-card">
-          <h2 class="contact-title">Get In Touch</h2>
-          <p class="contact-text">
-            I am always open to discussing system architectures, potential collaborations, or sharing thoughts on modern software engineering practices.
+            <!-- Pets -->
+            <article class="project-card" data-category="omarchy">
+              <div class="project-card-header">
+                <div class="project-icon"><i class="fa-solid fa-dragon"></i></div>
+                <div class="project-links">
+                  <a href="https://github.com/ChaseStruse/solar-forge-pets" target="_blank" rel="noopener" class="project-link-icon" aria-label="Solar Forge Pets on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">Solar Forge Pets</h3>
+              <p class="project-desc">Ember, a pixel-art dragon hatchling that lives on your Omarchy desktop. It blinks, follows your cursor, and naps when ignored. Runs as a native shell plugin with no extra daemon.</p>
+              <ul class="project-tags">
+                <li class="project-tag">QML</li>
+                <li class="project-tag">Wayland</li>
+                <li class="project-tag">Pixel Art</li>
+              </ul>
+            </article>
+
+            <!-- Omarchy Themes -->
+            <article class="project-card" data-category="omarchy">
+              <div class="project-card-header">
+                <div class="project-icon"><i class="fa-solid fa-palette"></i></div>
+                <div class="project-links">
+                  <a href="https://github.com/ChaseStruse/solar-forge-omarchy-themes" target="_blank" rel="noopener" class="project-link-icon" aria-label="Solar Forge Omarchy Themes on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">Solar Forge Omarchy Themes</h3>
+              <p class="project-desc">A collection of custom themes for Omarchy Linux, each following Omarchy's theme structure so it installs straight into your desktop.</p>
+              <ul class="project-tags">
+                <li class="project-tag">Lua</li>
+                <li class="project-tag">Theming</li>
+              </ul>
+            </article>
+          </div>
+
+          <p class="projects-footnote">
+            Looking for older work? Everything else lives on <a href="https://github.com/chasestruse?tab=repositories" target="_blank" rel="noopener">GitHub</a>.
           </p>
-          <div class="contact-buttons">
-            <a href="mailto:your.email@example.com" class="btn btn-primary">
-              <i class="fa-solid fa-envelope"></i> Email Me
-            </a>
-            <a href="https://github.com/chasestruse" target="_blank" class="btn btn-secondary">
-              <i class="fa-brands fa-github"></i> GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/chasestruse" target="_blank" class="btn btn-secondary">
-              <i class="fa-brands fa-linkedin"></i> LinkedIn
-            </a>
+        </div>
+      </section>
+
+      <!-- Tech Stack Section -->
+      <section id="tech-stack">
+        <div class="container">
+          <div class="section-title-wrapper">
+            <span class="eyebrow">Stack</span>
+            <h2 class="section-title">Tools I work with</h2>
+            <p class="section-subtitle">The core technologies behind my professional work and Solar Forge.</p>
+          </div>
+
+          <div class="tech-grid">
+            <div class="tech-card">
+              <i class="fa-brands fa-python"></i>
+              <h3>Python</h3>
+              <p>FastAPI, Flask, PySide6, automation</p>
+            </div>
+            <div class="tech-card">
+              <i class="fa-solid fa-code"></i>
+              <h3>C# &amp; .NET</h3>
+              <p>Web APIs, enterprise backend systems</p>
+            </div>
+            <div class="tech-card">
+              <i class="fa-brands fa-aws"></i>
+              <h3>AWS</h3>
+              <p>Lambda, ECS, S3, RDS, serverless</p>
+            </div>
+            <div class="tech-card">
+              <i class="fa-solid fa-database"></i>
+              <h3>SQL</h3>
+              <p>PostgreSQL, SQL Server, SQLite</p>
+            </div>
+            <div class="tech-card">
+              <i class="fa-brands fa-js"></i>
+              <h3>TypeScript &amp; Web</h3>
+              <p>Next.js, React, Three.js, HTMX</p>
+            </div>
+            <div class="tech-card">
+              <i class="fa-brands fa-linux"></i>
+              <h3>Linux Desktop</h3>
+              <p>Qt/QML, Tauri, Hyprland, Docker</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <div class="container">
+          <div class="contact-card">
+            <span class="eyebrow">Contact</span>
+            <h2 class="contact-title">Let's talk</h2>
+            <p class="contact-text">
+              I'm always happy to discuss system architecture, potential collaborations, or anything in the Solar Forge lineup.
+            </p>
+            <div class="contact-buttons">
+              <a href="mailto:your.email@example.com" class="btn btn-primary">
+                <i class="fa-solid fa-envelope"></i> Email Me
+              </a>
+              <a href="https://github.com/chasestruse" target="_blank" rel="noopener" class="btn btn-secondary">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/chasestruse" target="_blank" rel="noopener" class="btn btn-secondary">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer>
       <div class="container footer-content">
-        <p class="footer-copyright">
-          &copy; 2026 Chase Struse. All rights reserved.
-        </p>
+        <p class="footer-copyright">&copy; 2026 Chase Struse &middot; Solar Ram Studios</p>
+        <ul class="footer-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="/diagrams/">Diagrams</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="https://github.com/chasestruse" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
       </div>
     </footer>
 
-    <!-- Core Script -->
     <script src="js/main.js"></script>
   </body>
 </html>
