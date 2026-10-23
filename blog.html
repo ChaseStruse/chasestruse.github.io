@@ -36,7 +36,7 @@
       .search-wrapper input:focus {
         border-color: var(--accent-primary);
         outline: none;
-        box-shadow: 0 0 15px rgba(99, 102, 241, 0.15);
+        
       }
       .search-icon-inside {
         position: absolute;
@@ -65,9 +65,9 @@
         transition: var(--transition-fast);
       }
       .blog-tag-btn:hover, .blog-tag-btn.active {
-        background: var(--accent-primary);
-        border-color: var(--accent-primary);
-        color: white;
+        background: var(--text-primary);
+        border-color: var(--text-primary);
+        color: var(--bg-dark);
       }
       .no-results {
         text-align: center;
@@ -85,27 +85,23 @@
     <script src="https://kit.fontawesome.com/f28bdc6aab.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <!-- Ambient Background Elements -->
-    <div class="ambient-light light-1"></div>
-    <div class="ambient-light light-2"></div>
-    <div class="bg-grid"></div>
 
     <!-- Navigation Header -->
     <header class="navbar">
       <div class="container nav-container">
         <a href="index.html#hero" class="nav-logo">
-          <i class="fa-solid fa-terminal"></i> CS
+          <span class="nav-logo-mark">CS</span> Chase Struse
         </a>
         <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
           <i class="fa-solid fa-bars"></i>
         </button>
         <ul class="nav-links" id="nav-links">
-          <li><a href="index.html#hero" class="nav-link">Home</a></li>
           <li><a href="index.html#about" class="nav-link">About</a></li>
-          <li><a href="index.html#tech-stack" class="nav-link">Tech Stack</a></li>
           <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+          <li><a href="index.html#tech-stack" class="nav-link">Stack</a></li>
           <li><a href="blog.html" class="nav-link active">Blog</a></li>
-          <li><a href="index.html#contact" class="nav-link nav-btn">Contact Me</a></li>
+          <li><a href="/diagrams/" class="nav-link"><i class="fa-solid fa-diagram-project"></i> Diagrams</a></li>
+          <li><a href="index.html#contact" class="nav-link nav-btn">Contact</a></li>
         </ul>
       </div>
     </header>
@@ -113,8 +109,8 @@
     <!-- Blog Hero Section -->
     <section class="blog-hero">
       <div class="container">
-        <div class="section-title-wrapper" style="text-align: center; margin-bottom: 1rem;">
-          <h1 class="section-title" style="font-size: 3rem; font-weight: 800;">The Engineering Blog</h1>
+        <div class="section-title-wrapper" style="text-align: center; margin: 0 auto 1rem;">
+          <h1 class="section-title" style="font-size: 2.5rem;">The Engineering Blog</h1>
           <p class="section-subtitle" style="font-size: 1.15rem; max-width: 600px; margin: 0.5rem auto 0;">
             Thoughts, tutorials, and deep dives on software architecture, backend systems, and cloud engineering.
           </p>

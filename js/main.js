@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const filter = button.getAttribute('data-filter');
 
       projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
+        const categories = (card.getAttribute('data-category') || '').split(' ');
         
         // Premium transition: fade out, then hide/show, then fade in
         card.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transform = 'scale(0.92) translateY(5px)';
 
         setTimeout(() => {
-          if (filter === 'all' || category === filter) {
+          if (filter === 'all' || categories.includes(filter)) {
             card.style.display = 'flex';
             // Slight delay to trigger the transition after display is set
             setTimeout(() => {
@@ -89,10 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, observerOptions);
 
-  // Apply initial hidden state and observe
+  // Apply initial hidden state and observe (skipped when the user prefers reduced motion)
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.querySelectorAll('section').forEach(section => {
     // Skip hero section reveal since it is above the fold
-    if (section.id === 'hero') {
+    if (section.id === 'hero' || reduceMotion) {
       section.style.opacity = '1';
       section.style.transform = 'translateY(0)';
       return;
