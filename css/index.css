@@ -449,6 +449,27 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.cert-badge img {
+  flex-shrink: 0;
+}
+
+.cert-badge strong {
+  display: block;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
 /* --- Tech Stack Section --- */
 .tech-grid {
   display: grid;
