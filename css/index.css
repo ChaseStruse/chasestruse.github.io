@@ -14,29 +14,29 @@ html {
 
 :root {
   /* Surfaces */
-  --bg-dark: #090908;
-  --bg-darker: #030303;
-  --bg-panel: #141411;
-  --bg-panel-hover: #1a1915;
+  --bg-dark: #040f0b;
+  --bg-darker: #020906;
+  --bg-panel: #0f1f19;
+  --bg-panel-hover: #15291f;
 
   /* Borders */
-  --border-subtle: rgba(227, 207, 170, 0.14);
-  --border-strong: rgba(227, 207, 170, 0.26);
-  --border-accent: rgba(170, 128, 68, 0.45);
-  --border-accent-hover: #c89956;
+  --border-subtle: rgba(242, 245, 244, 0.12);
+  --border-strong: rgba(242, 245, 244, 0.24);
+  --border-accent: rgba(17, 153, 93, 0.5);
+  --border-accent-hover: #20d99a;
 
   /* Text */
-  --text-primary: #f2ede3;
-  --text-secondary: #b2ada3;
-  --text-muted: #8a8478;
+  --text-primary: #f2f5f4;
+  --text-secondary: #9aa4a0;
+  --text-muted: #787e81;
 
-  /* Accent: Solar Ram Studios gold, used sparingly */
-  --accent-primary: #efbd6d;
-  --accent-primary-hover: #ffdda5;
-  --accent-button: #efc784;
-  --accent-ink: #211506;
-  --accent-kicker: #cab18c;
-  --accent-soft: rgba(239, 189, 109, 0.1);
+  /* Accent: Solar Ram Studios emerald, used sparingly */
+  --accent-primary: #20d99a;
+  --accent-primary-hover: #5dffc0;
+  --accent-button: #20d99a;
+  --accent-ink: #02150d;
+  --accent-kicker: #7fe3bd;
+  --accent-soft: rgba(32, 217, 154, 0.1);
   
   /* Fonts */
   --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -116,7 +116,7 @@ section + section {
   display: flex;
   align-items: center;
   border-bottom: 1px solid transparent;
-  background: rgba(9, 9, 8, 0.8);
+  background: rgba(4, 15, 11, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: border-color var(--transition-normal), background var(--transition-normal);
@@ -124,7 +124,7 @@ section + section {
 
 .navbar.scrolled {
   border-bottom-color: var(--border-subtle);
-  background: rgba(9, 9, 8, 0.95);
+  background: rgba(4, 15, 11, 0.95);
 }
 
 .nav-container {
@@ -274,7 +274,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #4ade80;
+  background: #5dffc0;
 }
 
 .hero-title {
@@ -517,7 +517,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.5rem;
   border: 1px solid var(--border-accent);
   border-radius: 10px;
-  background: linear-gradient(110deg, #322310, #17120c);
+  background: linear-gradient(110deg, #0b3d29, #0a1f17);
 }
 
 .studio-mark {
@@ -932,7 +932,7 @@ h1, h2, h3, h4, h5, h6 {
 .article-content {
   font-size: 1.08rem;
   line-height: 1.8;
-  color: #c9ced6;
+  color: #d3dbd8;
 }
 
 .article-content h2 {
@@ -954,7 +954,7 @@ h1, h2, h3, h4, h5, h6 {
 .article-content a {
   color: var(--accent-primary);
   text-decoration: none;
-  border-bottom: 1px solid rgba(239, 189, 109, 0.4);
+  border-bottom: 1px solid rgba(32, 217, 154, 0.4);
   transition: var(--transition-fast);
 }
 
@@ -982,7 +982,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .article-content pre {
-  background: #0d1117;
+  background: #020906;
   border: 1px solid var(--border-subtle);
   border-radius: 8px;
   padding: 1.5rem;
